@@ -37,15 +37,13 @@ var SITE = {
 
         if(subquestion){
             var nextLevel = parseInt(level) + 1;
-            var newSingelLIneName = "question["+questionIndex+"][subquestion][singleline]";
+            var newSingelLIneName = "question["+questionIndex+"]";
             var newMultilineName = "question["+questionIndex+"]";
             var newMultichoiceName = "question["+questionIndex+"]";
 
             console.log(newSingelLIneName)
             //If level is greater than zero, then append sub question array to name of each element
             if(level > 0){
-                newSingelLIneName = "question["+questionIndex+"]";
-
                 for (var i = 1; i <= level; i++) {
                     newSingelLIneName += '[subquestion]';
                     newMultilineName += '[subquestion]';
